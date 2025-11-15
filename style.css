@@ -1,0 +1,465 @@
+/* ------------------------------ */
+/* CONFIGURAÇÕES GERAIS */
+/* ------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #0d0f23, #1b1f3a);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ------------------------------ */
+/* HEADER */
+/* ------------------------------ */
+
+header {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: #6bc1ff;
+}
+
+/* ------------------------------ */
+/* HERO */
+/* ------------------------------ */
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.hero-btn {
+    padding: 12px 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background: linear-gradient(120deg, #6bc1ff, #736bff);
+    color: #000;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ------------------------------ */
+/* SEÇÕES */
+/* ------------------------------ */
+
+.section {
+    padding: 90px 40px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+/* ------------------------------ */
+/* HABILIDADES */
+/* ------------------------------ */
+
+.skills {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills span {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ------------------------------ */
+/* PROJETOS */
+/* ------------------------------ */
+
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    width: 260px;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(20px);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* ------------------------------ */
+/* CONTATO */
+/* ------------------------------ */
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+textarea {
+    height: 120px;
+}
+
+.send-btn {
+    background: linear-gradient(120deg, #6bc1ff, #736bff);
+    color: #000;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ------------------------------ */
+/* ANIMAÇÕES */
+/* ------------------------------ */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: aparecer 1s forwards;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------------------ */
+/* RESPONSIVIDADE */
+/* ------------------------------ */
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    /* Ajustar padding global */
+    .section {
+        padding: 70px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        max-width: 300px;
+    }
+
+    /* GRID DOS PROJETOS EM 1 COLUNA */
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* HABILIDADES EM COLUNA */
+    .skills {
+        gap: 10px;
+    }
+
+    /* MENU RESPONSIVO */
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: start;
+        padding-top: 40px;
+        gap: 30px;
+        transition: 0.4s ease;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    /* BOTÃO HAMBÚRGUER */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+    }
+
+    .hamburger span {
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    /* Quando abrir o menu */
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* Animação do hambúrguer */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+}
+
+/* MUITO PEQUENO (celulares compactos) */
+@media (max-width: 400px) {
+    .hero h2 {
+        font-size: 1.7rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 768px) {
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .timeline-item {
+        padding: 18px;
+    }
+}
+
+/* ------------------------------ */
+/* SERVIÇOS */
+/* ------------------------------ */
+
+.section-subtitle {
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.services {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 280px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+/* ------------------------------ */
+/* EXPERIÊNCIA / FORMAÇÃO */
+/* ------------------------------ */
+
+.timeline {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.timeline-item {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.timeline-item span {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+/* ==== ANIMAÇÕES DE ENTRADA (FADE, SLIDE, ZOOM) ==== */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: .8s ease;
+}
+
+.slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: .8s ease;
+}
+
+.slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* ==== HOVER EM CARDS ==== */
+.card {
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,.15);
+}
+
+
+/* ==== BOTÕES INTERATIVOS ==== */
+button, .btn {
+    transition: .3s ease;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espaço entre a foto e o texto */
+}
+
+.logo-foto {
+  width: 45px;       /* tamanho da foto */
+  height: 45px;
+  border-radius: 50%; /* deixa redonda */
+  object-fit: cover;  /* mantém proporção */
+}

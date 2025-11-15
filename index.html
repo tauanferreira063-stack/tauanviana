@@ -1,123 +1,168 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="./estilo.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - Tauan Nascimento</title>
 
-<title>Curitiba</title>
+    <!-- Fonte moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<header>
-<nav class="navbar navbar-default">
-  <div class="container">
-   <div class="navbar-header">
-  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-	  <a class="navbar-brand" href="#">Curitiba</a>
-	  </div>
-   <div class="collapse navbar-collapse" id="menu">
-<ul class="nav navbar-nav" >
-<li><a href="#sobre-nos">Sobre nós</a></li>
-<li><a href="#clientes">Galeria</a></li>
-</ul>
-</div>
-</div>
-</nav>
-</header>
-<section class="container">
-<div id="sobre-nos" class="container">
-<h1> Sobre nós</h1>
-<img class="img-responsive" src="./img/sobreNos.jpg"/>
-<h4> Photo by Gabriel Rodrigues on Unsplash</h4>
 
-<div class="panel-group"id="painel-sobre">
-<div class="panel panel-default">
-<div class="panel-heading" data-parent="#painel-sobre" data-toggle="collapse" data-target="#p1">
-<h3 class="panel-title"  > Desde 1693</h3>
-</div>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+           <h1 class="logo fade-in">
+            <img src="tauan.png" alt="Foto de Tauan" class="logo-foto">
+            Tauan.dev
+            </h1>
 
-<div id="p1"class="collapse">
-<p class="panel-body" > Curitiba é a capital do Paraná, um dos três Estados que compõem a Região Sul do Brasil. Sua fundação oficial data de 29 de março de 1693 </p>
-</div>
-</div>
 
-<div class="panel panel-default">
-<div class="panel-heading" data-parent="#painel-sobre" data-toggle="collapse" data-target="#p2">
-<h3 class="panel-title" > Terra do pinhão</h3>
-</div>
+            <!-- BOTÃO HAMBÚRGUER -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-<div id="p2"class="collapse">
-<p  class="panel-body"> Curitiba é uma palavra de origem Guarani: kur yt yba quer dizer "grande quantidade de pinheiros, pinheiral"</p>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading" data-parent="#painel-sobre" data-toggle="collapse" data-target="#p3">
-<h3 class="panel-title"> O inverno em Curitiba</h3>
-</div>
-<div id="p3"class="collapse">
-<p class="panel-body"> A temperatura média da cidade no inverno é de 13 °C, podendo chegar a números negativos nos dias mais frios, de madrugada e de manhã. 
-Os meses de julho e agosto são os mais frios do ano, mas também os menos chuvosos. As manhãs de inverno costumam vir acompanhadas de uma neblina matinal <br>
-fonte: ricmais.com.br
-</p>
-</div>
-</div>
-</div>
-</section>
-<Section class="container">
-<h1 id="clientes" class="titulo-clientes"> Galeria</h1>
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
+            <!-- MENU -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#formacao">Formação</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="./img/foto1.jpg" alt="...">
-      <div class="carousel-caption">
-	  <h3> Photo by Cassiano Psomas on pexels</h3>
-        ...
-      </div>
-    </div>
-    <div class="item">
-      <img src="./img/foto2.jpg" alt="...">
-      <div class="carousel-caption">
-	  <h3> Photo by Koala on Unsplash</h3>
-        ...
-      </div>
-    </div>
-	<div class="item">
-      <img src="./img/foto3.jpg" alt="...">
-      <div class="carousel-caption">
-	   <h3> Photo by Cassiano Psomas on Unsplash</h3>
-        ...
-      </div>
-    </div>
-    ...
-  </div>
+    <!-- HERO -->
+    <section class="hero fade-in">
+        <h2 class="slide-right">Olá! Eu sou o Tauan 👋</h2>
+        <p class="slide-left">Atendimento remoto • Estudante de Front-End e Web Design</p>
+        <a href="#contato" class="btn hero-btn zoom-in">Entrar em contato</a>
+    </section>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+    <!-- SOBRE -->
+    <section id="sobre" class="section fade-in">
+        <h2 class="fade-in">Sobre mim</h2>
+        <p class="slide-left">
+            Meu nome é <strong>Tauan Nascimento Ferreira Viana</strong>, tenho 23 anos e trabalho com 
+            atendimento remoto. Atualmente estudo <strong>Front-End</strong> e 
+            <strong>Web Design</strong> para criar experiências digitais modernas, rápidas e intuitivas.
+        </p>
+    </section>
 
-<script src="./jquery.js"></script>
-<script src="./bootstrap/js/bootstrap.min.js"></script>
-	
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section fade-in">
+        <h2 class="fade-in">Habilidades</h2>
+        <div class="skills">
+            <span class="zoom-in">Atendimento ao cliente</span>
+            <span class="zoom-in">HTML</span>
+            <span class="zoom-in">CSS</span>
+            <span class="zoom-in">JavaScript</span>
+            <span class="zoom-in">Web Design</span>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="section fade-in">
+        <h2 class="slide-right">Serviços</h2>
+        <p class="section-subtitle fade-in">O que eu posso fazer por você</p>
+
+        <div class="services">
+            <div class="service-card zoom-in">
+                <h3>Atendimento ao Cliente</h3>
+                <p>Atendimento remoto profissional, cordial e eficiente.</p>
+            </div>
+
+            <div class="service-card zoom-in">
+                <h3>Criação de Sites</h3>
+                <p>Desenvolvimento de páginas modernas e responsivas.</p>
+            </div>
+
+            <div class="service-card zoom-in">
+                <h3>Web Design</h3>
+                <p>Design de layouts, paletas modernas e interfaces elegantes.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia" class="section fade-in">
+        <h2 class="slide-left">Experiência</h2>
+
+        <div class="timeline">
+            <div class="timeline-item slide-right">
+                <h3>Atendente • Supermercado Smart</h3>
+                <span>6 meses</span>
+                <p>Atendimento direto ao cliente, resolução de problemas e suporte presencial.</p>
+            </div>
+
+            <div class="timeline-item slide-left">
+                <h3>Atendimento Remoto • Autônomo</h3>
+                <span>Atual</span>
+                <p>Atendimento online, organização de demandas e resposta profissional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMAÇÃO -->
+    <section id="formacao" class="section fade-in">
+        <h2 class="slide-right">Formação</h2>
+
+        <div class="timeline">
+            <div class="timeline-item slide-left">
+                <h3>Curso Técnico • Desenvolvimento de Sistemas</h3>
+                <span>Em andamento</span>
+                <p>Estudos em lógica, HTML, CSS, JavaScript e bancos de dados.</p>
+            </div>
+
+            <div class="timeline-item slide-right">
+                <h3>Front-End e Web Design</h3>
+                <span>Autodidata</span>
+                <p>Prática em criação de interfaces, responsividade e UI/UX.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section fade-in">
+        <h2 class="fade-in">Projetos</h2>
+        <div class="projects">
+            <div class="card zoom-in">
+                <h3>Projeto 1</h3>
+                <p>Página simples com HTML e CSS.</p>
+            </div>
+            <div class="card zoom-in">
+                <h3>Projeto 2</h3>
+                <p>Layout responsivo em desenvolvimento.</p>
+            </div>
+            <div class="card zoom-in">
+                <h3>Projeto 3</h3>
+                <p>Projeto pessoal em JavaScript.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section fade-in">
+        <h2 class="slide-left">Entre em Contato</h2>
+        <form id="contactForm" class="zoom-in">
+            <input type="text" placeholder="Seu nome" required />
+            <input type="email" placeholder="Seu e-mail" required />
+            <textarea placeholder="Sua mensagem" required></textarea>
+            <button type="submit" class="btn send-btn">Enviar</button>
+        </form>
+        <p id="statusMsg"></p>
+    </section>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
